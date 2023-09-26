@@ -1,0 +1,30 @@
+.portal-display {
+    @apply text-black font-bold text-lg z-20
+    absolute h-4/5 w-4/5 rounded-xl text-center
+    select-none flex flex-col justify-center items-center backdrop-blur-md;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 10%;
+    animation: pop-out;
+    animation-duration: 300ms;
+}
+
+.portal-mask {
+    @apply absolute left-0 top-0 w-full h-full bg-black opacity-0 z-10;
+}
+
+.image-display {
+    @apply object-contain h-full w-full rounded-xl;
+}
+
+@keyframes pop-out {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}

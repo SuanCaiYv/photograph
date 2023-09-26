@@ -5,11 +5,13 @@ import { HomeList } from './components/home/List'
 function App() {
 
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<HomeList></HomeList>}></Route>
-            </Routes>
-        </BrowserRouter>
+        <div id='app'>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<HomeList></HomeList>}></Route>
+                </Routes>
+            </BrowserRouter>
+        </div>
     )
 }
 
