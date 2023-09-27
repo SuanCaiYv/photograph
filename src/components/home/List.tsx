@@ -3,6 +3,8 @@ import display from "../photo/Origin";
 import './List.css'
 import { useEffect, useState } from "react";
 
+const API_URL = 'http://localhost:8190'
+
 class ItemList {
     src: string = ''
     width: number = 0
@@ -13,11 +15,11 @@ export const HomeList = () => {
     const [photoList, setPhotoList] = useState<ItemList[]>([])
 
     useEffect(() => {
-        fetch('http://localhost:8190/list')
+        fetch(API_URL + '/list')
             .then(res => res.json())
             .then(res => {
                 for (let i = 0; i < res.length; i++) {
-                    res[i].src = 'http://localhost:8190' + res[i].src
+                    res[i].src = API_URL + res[i].src
                 }
                 setPhotoList(res)
             })
@@ -25,7 +27,6 @@ export const HomeList = () => {
 
     const onClick = (index: number) => {
         const src = photoList[index].src.replace('preview', 'origin')
-        console.log(src);
         display(src)
     }
 
