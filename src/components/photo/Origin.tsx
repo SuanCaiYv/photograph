@@ -63,10 +63,13 @@ const Display = (props: {
             <div className={'portal-display'}>
                 <img src={props.src} alt="" className={'image-display'} />
                 <div className={'exif'}>
-                    {camera} {lens} {focalLength} {time}
+                    {camera} {lens} {focalLength}
                 </div>
                 <div className={'exif'}>
                     {aperture} {exposure} ISO: {iso}
+                </div>
+                <div className={'exif'}>
+                    {time}
                 </div>
             </div>
             <div className={'portal-mask'} onClick={onMask}></div>

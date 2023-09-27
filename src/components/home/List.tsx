@@ -3,7 +3,7 @@ import display from "../photo/Origin";
 import './List.css'
 import { useEffect, useState } from "react";
 
-const API_URL = 'http://localhost:8190'
+const API_URL = 'http://106.54.221.36:8190'
 
 class ItemList {
     src: string = ''

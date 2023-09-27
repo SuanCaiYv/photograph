@@ -15,7 +15,7 @@
 
 .image-display {
     @apply object-contain w-full rounded-xl;
-    height: calc(100% - 32px);
+    height: calc(100% - 48px);
 }
 
 .exif {
